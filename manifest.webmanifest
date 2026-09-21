@@ -1,12 +1,12 @@
 {
-  "name": "Auditoría Verisure",
-  "short_name": "Auditoría",
+  "name": "Auditorías Verisure",
+  "short_name": "Auditorías",
   "description": "Formulario de auditoría presencial a técnicos",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#e30613",
+  "background_color": "#ffffff",
   "theme_color": "#e30613",
   "icons": [
     {
