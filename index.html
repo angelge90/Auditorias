@@ -72,8 +72,8 @@ canvas{height:80px}
 
 </style>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+<script src="./lib/jspdf.umd.min.js"></script>
+<script src="./lib/jspdf.plugin.autotable.min.js"></script>
 
 </head>
 <body>
@@ -679,6 +679,23 @@ async function compartirPDF(){
     alert('No se ha podido compartir el PDF. Prueba con DESCARGAR PDF.');
     console.error(e);
   }
+}
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('./service-worker.js', {scope: './'})
+      .then(function (registration) {
+        registration.update();
+        window.setInterval(function () {
+          registration.update();
+        }, 60 * 60 * 1000);
+      })
+      .catch(function (error) {
+        console.error('No se ha podido registrar el Service Worker:', error);
+      });
+  });
 }
 </script>
 
