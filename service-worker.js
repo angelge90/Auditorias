@@ -1,12 +1,14 @@
-const CACHE_NAME = 'auditorias-verisure-v1';
-const APP_SHELL = [
+const CACHE_NAME = 'auditorias-verisure-v2';
+ const APP_SHELL = [
   './',
   './index.html',
   './manifest.webmanifest',
   './favicon-32.png',
   './apple-touch-icon.png',
   './icon-192.png',
-  './icon-512.png'
+  './icon-512.png',
+  './lib/jspdf.umd.min.js',
+  './lib/jspdf.plugin.autotable.min.js'
 ];
 
 self.addEventListener('install', event => {
